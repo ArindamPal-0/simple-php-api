@@ -1,4 +1,4 @@
-# API for stories
+# Simple PHP API
 
 ## Instructions
 
