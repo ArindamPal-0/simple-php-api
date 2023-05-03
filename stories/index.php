@@ -4,6 +4,14 @@ require_once realpath(__DIR__ . "/../vendor/autoload.php");
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/..");
 $dotenv->load();
 
+// check if database environment variables are set .env file
+foreach(array("DB_HOST", "DB_USERNAME", "DB_PASSWORD", "DB_NAME") as $envVariable) {
+    if(!isset($_ENV[$envVariable])) {
+        throw new Exception($envVariable . " environment variable is not set");
+    }
+
+}
+
 // Database credentials from `.env` file
 $dbHost = $_ENV["DB_HOST"];
 $dbUsername = $_ENV["DB_USERNAME"];

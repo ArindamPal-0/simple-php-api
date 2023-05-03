@@ -30,3 +30,9 @@ DB_NAME = "tinytalks"
 ```
 
 Then run the xampp apache and mysql server to start the api server.
+
+now you can access the API server at the url `http://localhost/app/stories`.
+
+- To get all the stories: `http://localhost/app/stories`
+- To search a story with title containing `hello`: `http://localhost/app/stories/?search=hello`
+- To get a story with particular id=1: `http://localhost/app/stories/?id=1`
