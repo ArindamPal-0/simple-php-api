@@ -1,4 +1,9 @@
 <?php
+
+// Set cross-site access header
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+
 // data
 $data = array(
     "msg" => "Hello, World!"
